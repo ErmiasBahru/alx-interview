@@ -6,11 +6,10 @@ import sys
 
 
 def is_safe(board, row, col, n):
-    # Check if it is safe to place a queen in the current row and column
-    for i in range(row):
-        if board[i] == col or abs(board[i] - col) == abs(i - row):
-            return False
-    return True
+    return not any(
+        board[i] == col or abs(board[i] - col) == abs(i - row)
+        for i in range(row)
+    )
 
 
 def n_queens_util(board, row, n):

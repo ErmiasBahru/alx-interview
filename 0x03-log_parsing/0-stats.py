@@ -15,10 +15,10 @@ def print_logs():
     """
     Prints status codes to the logs
     """
-    print("File size: {}".format(size_summation))
+    print(f"File size: {size_summation}")
     for k, v in sorted(status_codes.items()):
         if v != 0:
-            print("{}: {}".format(k, v))
+            print(f"{k}: {v}")
 
 
 if __name__ == "__main__":
